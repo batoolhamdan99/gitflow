@@ -4,5 +4,6 @@ public class Main {
         account.deposit(300);
         account.withdraw(100);
         System.out.println("Account Balance: " + account.getBalance());
+        System.out.println("Transaction History: " + account.getTransactionHistory());	
     }
 }
