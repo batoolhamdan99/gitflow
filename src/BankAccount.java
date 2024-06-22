@@ -32,6 +32,18 @@ public class BankAccount {
 
     }
 
+   public void addInterest(double interestRate) {
+       if (interestRate > 0) {
+           double interest = balance * interestRate / 100;
+           balance += interest;
+           transactionHistory.add("Interest added: $" + interest);
+       }
+   }
+
+
+
+
+
     public double getBalance() {
         return balance;
     }
