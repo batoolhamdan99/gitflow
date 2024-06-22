@@ -23,9 +23,13 @@ public class BankAccount {
 
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
-           balance -= amount;
+            balance -= amount;
             transactionHistory.add("Withdrew: $" + amount);
-        }
+        } else {        
+           transactionHistory.add("Failed withdrawal attempt: $" + amount);        
+
+	}
+
     }
 
     public double getBalance() {
